@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+
+  angular-services:
+    container_name: tweetapp-frontend
+    build: .
+    volumes: 
+      - '.:/usr/src/app'
+    ports:
+      - 4200:4200
+  
