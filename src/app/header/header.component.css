@@ -1,0 +1,29 @@
+.h3{
+    text-align: left;
+    color: white;
+   
+    
+}
+
+.header{
+    background-color: rgba(29,161,242);
+    
+}
+nav ul li {
+    width: 100%; 
+    align-items: baseline;
+    text-align: right;
+    word-spacing: 30px;
+    text-align-last: right;
+    text-indent: 0.5em;
+     }
+
+     a{
+         color: white;
+         text-decoration: none;
+     }
+
+.navbar-link{
+    color: rgb(2, 2, 51);
+    text-indent: 1em;
+}

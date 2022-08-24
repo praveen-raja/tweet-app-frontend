@@ -1,0 +1,27 @@
+<h3>All Users Details</h3>
+<div class="container">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Firstname</th>
+                <th scope="col">Lastname</th>
+                <th scope="col">Contactnumber</th>
+                <th scope="col">Username</th>
+                <th scope="col">isLoggedIn?</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr *ngFor="let user of users">
+                <th scope="row">#</th>
+                <td>{{user.firstName}}</td>
+                <td>{{user.lastName}}</td>
+                <td>{{user.contactNumber}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.loginId}}</td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
