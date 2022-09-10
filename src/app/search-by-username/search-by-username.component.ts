@@ -32,7 +32,7 @@ searchUserNow(data: any) {
     (result) => {
       console.warn(result)
       this.user = result
-      alert("Results For You")
+      alert("Please scroll below for "+data.username+" details!")
       
     },
     (error) => {
