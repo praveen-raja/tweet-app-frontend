@@ -7,15 +7,18 @@
                 <th scope="col">ID</th>
                 <th scope="col">Tweet</th>
                 <th scope="col">Tag</th>
+                <th scope="col">Username</th>
+                <th scope="col">Email Id</th>
             </tr>
         </thead>
         <tbody>
-
             <tr *ngFor="let user of tweets">
                 <th scope="row">#</th>
                 <td>{{user.id}}</td>
                 <td>{{user.text}}</td>
                 <td>{{user.tag}}</td>
+                <td>{{user.user.firstName}}</td>
+                <td>{{user.user.email}}</td>
             </tr>
 
         </tbody>
