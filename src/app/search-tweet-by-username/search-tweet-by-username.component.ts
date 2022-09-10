@@ -24,7 +24,7 @@ export class SearchTweetByUsernameComponent implements OnInit {
       (result) => {
         console.warn(result)
         this.user =result
-        alert("Your Tweets Are: ")
+        alert("Please scroll below for "+data.username+" tweets!")
        
         
       },
