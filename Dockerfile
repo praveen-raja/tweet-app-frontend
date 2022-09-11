@@ -1,9 +1,12 @@
-FROM node:latest
+# 1st stage
+FROM node:latest as node
 
 RUN mkdir /usr/src/app
 COPY . /usr/src/app/
 WORKDIR /usr/src/app
 
-RUN npm install -g @angular/cli@latest && npm install
+RUN npm install && npm run build --prod
 
-CMD ng serve --host 0.0.0.0 --port 4200
+# 2nd stage
+FROM nginx:alpine
+COPY --from=node /usr/src/app/dist/tweet-app /usr/share/nginx/html
