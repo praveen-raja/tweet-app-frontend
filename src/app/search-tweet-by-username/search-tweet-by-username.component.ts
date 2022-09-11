@@ -20,7 +20,7 @@ export class SearchTweetByUsernameComponent implements OnInit {
   
   searchUserTweet(data: any) {
     console.warn(data)
-    return this.http.get(`http://localhost:8000/getTweetOfUser/${data.username}`).subscribe(
+    return this.http.get(`http://tweetapp-backend-lb-949834613.us-east-1.elb.amazonaws.com/getTweetOfUser/${data.username}`).subscribe(
       (result) => {
         console.warn(result)
         this.user =result

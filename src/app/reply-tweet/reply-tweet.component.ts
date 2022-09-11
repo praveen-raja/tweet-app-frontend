@@ -19,7 +19,7 @@ export class ReplyTweetComponent implements OnInit {
 
   replyTweetNow(data: any) {
     console.warn(data)
-    return this.http.post(`http://localhost:8000/reply/${data.id}`,data).subscribe(
+    return this.http.post(`http://tweetapp-backend-lb-949834613.us-east-1.elb.amazonaws.com/reply/${data.id}`,data).subscribe(
       (result) => {
         console.warn(result)
         alert("Successfully Updated")

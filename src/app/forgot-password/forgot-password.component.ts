@@ -19,7 +19,7 @@ export class ForgotPasswordComponent implements OnInit {
 
   updatePasswordNow(data: any) {
     console.warn(data)
-    return this.http.get(`http://localhost:8000/forgotPassword/${data.username}/${data.password}`).subscribe(
+    return this.http.get(`http://tweetapp-backend-lb-949834613.us-east-1.elb.amazonaws.com/forgotPassword/${data.username}/${data.password}`).subscribe(
       (result) => {
         console.warn(result)
         alert("Successfully Updated")

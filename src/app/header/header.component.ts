@@ -18,7 +18,7 @@ export class HeaderComponent implements OnInit {
   loginStatus: boolean = false;
   logoutNow() {
     this.loginStatus = true
-    let resp = this.http.get("http://localhost:8000/logout").subscribe((result) => {
+    let resp = this.http.get("http://tweetapp-backend-lb-949834613.us-east-1.elb.amazonaws.com/logout").subscribe((result) => {
       console.warn(result)
       this.loginStatus = false
     });

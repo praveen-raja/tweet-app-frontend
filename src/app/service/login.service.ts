@@ -7,11 +7,19 @@ import { LoginComponent } from '../login/login.component';
   providedIn: 'root'
 })
 export class LoginService {
+  
+  userDisplayName:any = sessionStorage.getItem('user');
 
   constructor(private http: HttpClient) { }
   public login(data: any)
   {
-    return this.http.get(`http://localhost:8000/login/${data.username}/${data.password}`); 
+    return this.http.get(`http://tweetapp-backend-lb-949834613.us-east-1.elb.amazonaws.com/login/${data.username}/${data.password}`); 
+  }
+
+  public getUsername()
+  {
+     var user = JSON.stringify(sessionStorage.getItem('user'))
+     return user
   }
 
   isUserLoggedIn(){

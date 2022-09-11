@@ -20,7 +20,7 @@ export class SearchByUsernameComponent implements OnInit {
 
 //   searchUserNow(data: any) {
 //     console.warn(data)
-//     return this.http.get(`http://localhost:8000/searchByUsername/${data.username}`).subscribe((result: any) => {
+//     return this.http.get(`http://tweetapp-backend-lb-949834613.us-east-1.elb.amazonaws.com/searchByUsername/${data.username}`).subscribe((result: any) => {
 //      this.user = result
 //      console.warn(result)
 //    });
@@ -28,7 +28,7 @@ export class SearchByUsernameComponent implements OnInit {
 
 searchUserNow(data: any) {
   console.warn(data)
-  return this.http.get(`http://localhost:8000/searchByUsername/${data.username}`).subscribe(
+  return this.http.get(`http://tweetapp-backend-lb-949834613.us-east-1.elb.amazonaws.com/searchByUsername/${data.username}`).subscribe(
     (result) => {
       console.warn(result)
       this.user = result

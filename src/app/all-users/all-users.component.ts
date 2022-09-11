@@ -12,14 +12,14 @@ export class AllUsersComponent implements OnInit {
   users: any;
   ngOnInit() {
 
-    let resp = this.http.get("http://localhost:8000/allUsers")
+    let resp = this.http.get("http://tweetapp-backend-lb-949834613.us-east-1.elb.amazonaws.com/allUsers")
     resp.subscribe((result) => this.users = result);
   }
 
   // allUsers(data: any) {
   //   console.warn(data)
 
-  //   let resp = this.http.get("http://localhost:8000/allUsers")
+  //   let resp = this.http.get("http://tweetapp-backend-lb-949834613.us-east-1.elb.amazonaws.com/allUsers")
   //   resp.subscribe((result) => this.users = result);
 
   // }

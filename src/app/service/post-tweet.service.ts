@@ -10,6 +10,6 @@ export class PostTweetService {
 
   public doPost(data: any)
   {
-    return this.http.post("http://localhost:8000/addTweet",data); 
+    return this.http.post("http://tweetapp-backend-lb-949834613.us-east-1.elb.amazonaws.com/addTweet",data); 
   }
 }

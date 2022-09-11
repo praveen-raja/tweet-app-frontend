@@ -18,7 +18,7 @@ export class DeleteTweetComponent implements OnInit {
 
   deleteTweetNow(data: any) {
     console.warn(data)
-    return this.http.delete(`http://localhost:8000/deleteTweet/${data.id}/${data.username}`).subscribe(
+    return this.http.delete(`http://tweetapp-backend-lb-949834613.us-east-1.elb.amazonaws.com/deleteTweet/${data.id}/${data.username}`).subscribe(
       (result) => {
         console.warn(result)
         alert("Successfully Updated")

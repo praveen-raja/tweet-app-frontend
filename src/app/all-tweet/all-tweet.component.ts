@@ -12,7 +12,7 @@ export class AllTweetComponent implements OnInit {
   tweets: any;
   ngOnInit() {
 
-    let resp = this.http.get("http://localhost:8000/allTweet")
+    let resp = this.http.get("http://tweetapp-backend-lb-949834613.us-east-1.elb.amazonaws.com/allTweet")
     resp.subscribe((result) => this.tweets = result);
   }
 

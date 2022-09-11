@@ -17,7 +17,7 @@ export class LikeTweetComponent implements OnInit {
   }
   likeTweetNow(data: any) {
     console.warn(data)
-    return this.http.put(`http://localhost:8000/like/${data.id}/${data.option}`,data).subscribe(
+    return this.http.put(`http://tweetapp-backend-lb-949834613.us-east-1.elb.amazonaws.com/like/${data.id}/${data.option}`,data).subscribe(
       (result) => {
         console.warn(result)
         alert("Feedback Submitted Successfully!!")

@@ -18,7 +18,7 @@ export class UpdateTweetComponent implements OnInit {
 
   updateTweetNow(data: any) {
     console.warn(data)
-    return this.http.put(`http://localhost:8000/updateTweet/${data.id}/${data.username}`,data).subscribe(
+    return this.http.put(`http://tweetapp-backend-lb-949834613.us-east-1.elb.amazonaws.com/updateTweet/${data.id}/${data.username}`,data).subscribe(
       (result) => {
         console.warn(result)
         alert("Successfully Added!!")
